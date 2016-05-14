@@ -41,7 +41,7 @@ header{
 	cursor: default;
 	padding: 12px 15px;
 	color: #fff;
-	background-color: #259B24;
+	background-color: #0D161C;
 }
 header h1{
 	font-size: 1.4em;
@@ -149,20 +149,20 @@ header h1{
 	border: 0;
 	padding: 7px 10px;
 	margin: 0;
-	background-color: #259b24;
+	background-color: #E34B3B;
 	color: #fff;
 	font-weight: 500;
 	text-align: left;
 	text-transform: uppercase;
 	cursor: pointer;
 	box-sizing: border-box;
-	box-shadow: 0 2px 3px #aaa;
+	box-shadow: 0 3px 30px rgba(0,0,0,0.20);
 }
 #directions-form button:active{
 	opacity: .7;
 }
 #routes-container{
-	background-color: #eee;
+	background-color: #0D161C;
 	position: relative;
 	flex-grow: 1;
 }

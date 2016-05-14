@@ -179,7 +179,7 @@ var App = React.createClass({displayName: "App",
 				React.createElement(Map, null), 
 				React.createElement("div", {id: "sidebar"}, 
 					React.createElement("header", null, 
-						React.createElement("h1", null, React.createElement(Icon, {type: "mountains", width: "24", height: "24"}), " Steepless")
+						React.createElement("h1", null, React.createElement(Icon, {type: "mountains", width: "24", height: "24"}), " PlotPDX")
 					), 
 					React.createElement(RouteForm, {start: this.state.start, end: this.state.end, units: units, travelMode: travelMode, onUnitChange: this.handleUnitChange, onTravelModeChange: this.handleTravelModeChange}), 
 					React.createElement(RouteList, {data: this.state.routes, travelMode: travelMode, units: units, onRouteClick: this.handleRouteClick})
@@ -203,8 +203,9 @@ var Map = React.createClass({displayName: "Map",
 	getDefaultProps: function(){
 		return {
 			map: {
-				center: new google.maps.LatLng(37.7577, -122.4376),
+				center: new google.maps.LatLng(45.52306220000001,-122.67648159999999),
 				zoom: 12,
+				styles: [{"featureType":"water","stylers":[{"color":"#0e171d"}]},{"featureType":"landscape","stylers":[{"color":"#1e303d"}]},{"featureType":"road","stylers":[{"color":"#1e303d"}]},{"featureType":"poi.park","stylers":[{"color":"#1e303d"}]},{"featureType":"transit","stylers":[{"color":"#182731"},{"visibility":"simplified"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"color":"#f0c514"},{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.text.stroke","stylers":[{"color":"#1e303d"},{"visibility":"off"}]},{"featureType":"transit","elementType":"labels.text.fill","stylers":[{"color":"#e77e24"},{"visibility":"off"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#94a5a6"}]},{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"simplified"},{"color":"#e84c3c"}]},{"featureType":"poi","stylers":[{"color":"#e84c3c"},{"visibility":"off"}]}],
 				disableDefaultUI: true
 			}
 		};
@@ -406,8 +407,8 @@ var RouteList = React.createClass({displayName: "RouteList",
 		} else {
 			return (
 				React.createElement("div", {id: "routes-container"}, 
-					React.createElement("p", null, "Begin by entering the Start and Destination locations above."), 
-					React.createElement("p", null, "Try an example: ", React.createElement("a", {href: "#walking/Chinatown, SF/Twin Peaks, SF"}, "Walking from Chinatown to Twin Peaks"))
+					React.createElement("p", null, "Prototype"), 
+					React.createElement("p", null, "Testing: ", React.createElement("a", {href: "#walking/Chinatown, SF/Twin Peaks, SF"}, "Walking from Chinatown to Twin Peaks"))
 				)
 			)
 		}

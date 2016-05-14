@@ -179,7 +179,7 @@ var App = React.createClass({
 				<Map />
 				<div id="sidebar">
 					<header>
-						<h1><Icon type="mountains" width="24" height="24"></Icon> Steepless</h1>
+						<h1><Icon type="mountains" width="24" height="24"></Icon> PlotPDX</h1>
 					</header>
 					<RouteForm start={this.state.start} end={this.state.end} units={units} travelMode={travelMode} onUnitChange={this.handleUnitChange} onTravelModeChange={this.handleTravelModeChange} />
 					<RouteList data={this.state.routes} travelMode={travelMode} units={units} onRouteClick={this.handleRouteClick} />
@@ -203,8 +203,9 @@ var Map = React.createClass({
 	getDefaultProps: function(){
 		return {
 			map: {
-				center: new google.maps.LatLng(37.7577, -122.4376),
+				center: new google.maps.LatLng(45.52306220000001,-122.67648159999999),
 				zoom: 12,
+				styles: [{"featureType":"water","stylers":[{"color":"#0e171d"}]},{"featureType":"landscape","stylers":[{"color":"#1e303d"}]},{"featureType":"road","stylers":[{"color":"#1e303d"}]},{"featureType":"poi.park","stylers":[{"color":"#1e303d"}]},{"featureType":"transit","stylers":[{"color":"#182731"},{"visibility":"simplified"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"color":"#f0c514"},{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.text.stroke","stylers":[{"color":"#1e303d"},{"visibility":"off"}]},{"featureType":"transit","elementType":"labels.text.fill","stylers":[{"color":"#e77e24"},{"visibility":"off"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#94a5a6"}]},{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"simplified"},{"color":"#e84c3c"}]},{"featureType":"poi","stylers":[{"color":"#e84c3c"},{"visibility":"off"}]}],
 				disableDefaultUI: true
 			}
 		};
@@ -406,8 +407,8 @@ var RouteList = React.createClass({
 		} else {
 			return (
 				<div id="routes-container">
-					<p>Begin by entering the Start and Destination locations above.</p>
-					<p>Try an example: <a href="#walking/Chinatown, SF/Twin Peaks, SF">Walking from Chinatown to Twin Peaks</a></p>
+					<p>Prototype</p>
+					<p>Testing: <a href="#walking/Chinatown, SF/Twin Peaks, SF">Walking from Chinatown to Twin Peaks</a></p>
 				</div>
 			)
 		}
